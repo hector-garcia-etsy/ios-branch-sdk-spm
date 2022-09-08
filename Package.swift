@@ -19,6 +19,9 @@ let package = Package(
             name: "Branch",
             path: "Branch-SDK",
             publicHeadersPath: ".",
+            cSettings: [
+               .unsafeFlags(["-w"])
+            ],
             linkerSettings: [
                 .linkedFramework("CoreServices"),
                 .linkedFramework("SystemConfiguration"),

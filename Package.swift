@@ -19,8 +19,8 @@ let package = Package(
             name: "Branch",
             path: "Branch-SDK",
             publicHeadersPath: ".",
-            cSettings: [
-               .unsafeFlags(["-w"])
+            swiftSettings: [
+               .unsafeFlags(["-Xcc", "-Wno-incomplete-umbrella"])
             ],
             linkerSettings: [
                 .linkedFramework("CoreServices"),

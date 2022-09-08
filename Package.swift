@@ -18,13 +18,8 @@ let package = Package(
         .target(
             name: "Branch",
             path: "Branch-SDK",
+            exclude: [ "BNCTuneUtility.h"],
             publicHeadersPath: ".",
-            cSettings: [
-                .unsafeFlags(["-Wno-incomplete-umbrella"])
-            ],
-            swiftSettings: [
-               .unsafeFlags(["-Xcc", "-Wno-incomplete-umbrella"])
-            ],
             linkerSettings: [
                 .linkedFramework("CoreServices"),
                 .linkedFramework("SystemConfiguration"),
